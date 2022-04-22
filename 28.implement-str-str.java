@@ -12,9 +12,6 @@ class Solution {
             return 0;
         }
         int haystack_len = haystack.length();
-        // if (needle_len == haystack_len) {
-        //     return haystack.equals(needle) ? 0 : 1;
-        // }
         
         for (int i = 0; i <= (haystack_len - needle_len); i++) {
             String sub = haystack.substring(i, i + needle_len);
