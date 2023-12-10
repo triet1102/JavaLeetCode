@@ -10,17 +10,20 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        while m > 0 and n > 0:
-            if nums1[m-1] > nums2[n-1]:
-                nums1[m+n-1] = nums1[m-1]
+        while n >= 0 or m >= 0:
+            print(n, m)
+            if n == 0:
+                print("n=0")
+                return nums1
+            elif m == 0:
+                nums1[:n] = nums2[:n]
+                return nums1
+            elif nums1[m - 1] > nums2[n - 1]:
+                nums1[m + n - 1] = nums1[m - 1]
                 m -= 1
             else:
-                nums1[m+n-1] = nums2[n-1]
+                nums1[m + n - 1] = nums2[n - 1]
                 n -= 1
-        
-        print(f"n={n}")
-        print(f"s1={nums1[0:n-1]}")
-        print(f"s2={nums2[0:n-1]}")
-        if n > 0:
-            nums1[0:n] = nums2[0:n] 
+
+
 # @lc code=end
