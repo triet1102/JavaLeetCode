@@ -29,11 +29,9 @@ class Solution:
             if s[index : index + 2] in d:
                 total += d[s[index : index + 2]]
                 index += 2
-                print(f"index + 2 = {index}")
             else:
                 total += d[s[index]]
                 index += 1
-                print(f"index + 1 = {index}")
 
         if index + 1 == len_s:
             total += d[s[index]]
